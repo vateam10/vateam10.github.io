@@ -6,10 +6,6 @@
 -->
 <!DOCTYPE html>
 <html>
-
-<!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -118,11 +114,11 @@
 </head>
 
 <body>
-
+  <h1>Lending Tree's Campaign Sources Across the US</h1>
   <div class="container">
     <div class="chart-container" id="choropleth-chart">
       <div class="chart-title">
-        <h2>Campaign Sources Across the US: <span class="chart-title-value"></span></h2>
+        <h2>Campaign Sources Across the US: <span class="chart-title-value">All</span></h2>
       </div>
       <div class="chart-chart"></div>
     </div>
@@ -297,8 +293,8 @@
                 .style("left", (d3.event.pageX - tooltip_width - 30) + "px");
             }
 				console.log("updating the map");
-              choroplethChartTitle.text(csrc);
-              choroplethChart.update(csrc);
+              //choroplethChartTitle.text(csrc);
+              //choroplethChart.update(csrc);
             })
             .on("mouseout", function () {
 				// remove the tool tip and refresh the graphs to reflect all the data 
@@ -307,8 +303,8 @@
 			  $(this).attr("border", "0");
               $(this).append("rect").attr("stroke", "none");
 			  $("#tooltip-container").hide();
-			  choroplethChartTitle.text(csrc);
-              choroplethChart.update(csrc);
+			  //choroplethChartTitle.text(csrc);
+              //choroplethChart.update(csrc);
             });
         }
         return chart;
@@ -370,7 +366,7 @@
                 .style("left", (d3.event.pageX - tooltip_width - 30) + "px");
             }
             barChartTitle.text(stateAbv);
-            barChart.update(stateAbv);
+           // barChart.update(stateAbv);
           })
           .on("mouseout", function () {
             d3.select(this).attr("stroke", "#999").attr("stroke-width", 0.5);
@@ -379,11 +375,11 @@
 			$(this).attr("border", "0");
             $(this).append("rect").attr("stroke", "none");
 			$("#tooltip-container").hide();barChartTitle.text(stateAbv);
-            barChart.update(stateAbv);
+            //barChart.update(stateAbv);
           });
 		const chart = {};
         chart.update = function (csrc) {
-		  console.log("Choropleth map showing data for", csrc);
+		  //console.log("Choropleth map showing data for", csrc);
           colorScale.domain([
             0,
             d3.max(UsersByCSrc.get(csrc), d => d.User_Count) / 0.75 // Increase the max value to avoid the darkest blue color
