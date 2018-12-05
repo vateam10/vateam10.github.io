@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script>
+    $( document ).ready(function() {
+        loadDashboard()
+    });    
+</script>
+</head>
+<body>
+<table align="center">
+    <tr>
+        <td>
+            <h2 id="choropleth" align="center">Choropleth Map</h2><h2>Total user_visit count by state: <span id="product_label"></span> Products</h2><svg width="700" height="800" id="choropleth_map"></svg>
+        </td>
+        <td>
+            <h2 id="barchart" align="center">Bar Chart</h2><h2>User_visit count for each product: <span id="state_label">All  </span></h2><svg width="700" height="800" id="bar_chart"></svg>
+        </td>
+    </tr>
+</table>
+<div id="tooltip-container"></div>
+
+
+
+</body>
